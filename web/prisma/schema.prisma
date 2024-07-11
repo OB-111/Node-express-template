@@ -17,3 +17,11 @@ model Session {
   accessToken String
   userId      BigInt?
 }
+
+// Prisma schema for saved carts
+model SavedCart {
+  id        Int      @id @default(autoincrement())
+  customerId String
+  cartData   Json
+}
+
